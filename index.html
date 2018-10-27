@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gauss-Seidel iteration method</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+        <div class="container">
+            <h1 class="text-center">Gauss-Seidel iteration method</h1>
+            <form id="inputForm" style="margin-bottom: 30px;">
+                <div class="form-group">
+                    <label for="matrixA">Matrix A</label>
+                    <input type="text" class="form-control" id="matrixA" value="[[3,1,-1],[2,-4,1],[1,2,5]]">
+                </div>
+                <div class="form-group">
+                    <label for="vectorB">Vector b</label>
+                    <input type="text" class="form-control" id="vectorB" value="[3,-1,8]">
+                </div>
+                <div class="form-group">
+                    <label for="vectorX0">Vector x<sup>0</sup></label>
+                    <input type="text" class="form-control" id="vectorX0" value="[0,0,0]">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="epsilon">&epsilon;</label>
+                            <input type="text" class="form-control" id="epsilon" value="0.01">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="maxIterations">Max iterations</label>
+                            <input type="text" class="form-control" id="maxIterations" value="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Compute</button>
+                </div>
+                
+            </form>
+            <p id="solution" class="text-center"></p>
+            <p id="iterations" class="text-center"></p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">x<sup>k</sup></th>
+                        <th scope="col">value</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        
+		<script src="script.js"></script>
+	</body>
+</html>
